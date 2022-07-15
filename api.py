@@ -64,7 +64,7 @@ class StudentSchema(Schema):
 
 @app.route('/', methods=['GET'])
 def home():
-    return '<p>Hello from students WRO!</p>', 200
+    return '<p>Hello from students WROd!</p>', 200
 
 
 @app.route('/api', methods=['GET'])
