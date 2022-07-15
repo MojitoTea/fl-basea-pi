@@ -1,0 +1,41 @@
+{
+    "service_name": "Student API documentation",
+    "endpoints": [
+        {
+            "method": "GET",
+            "path": "/api/students",
+            "description": "Get all students",
+            "status_code": ["200"]
+        },
+        {
+            "method": "GET",
+            "path": "/api/students/get/<id>",
+            "description": "Get student by id",
+            "status_code": ["200", "404"]
+        },
+        {
+            "method": "POST",
+            "path": "/api/students/add",
+            "description": "Create student",
+            "status_code": ["201", "400"]
+        },
+        {
+            "method": "PUT",
+            "path": "/api/students/change/<int:id>",
+            "description": "Update student, all fields",
+            "status_code": ["200", "400", "404"]
+        },
+        {
+            "method": "PATCH",
+            "path": "/api/students/modify/<int:id>",
+            "description": "Update student, some fields",
+            "status_code": ["200", "400", "404"]
+        },
+        {
+            "method": "DELETE",
+            "path": "/api/students/delete/<int:id>",
+            "description": "Delete student",
+            "status_code": ["200", "404"]
+        }
+    ]
+}

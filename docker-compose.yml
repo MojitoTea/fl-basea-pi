@@ -1,0 +1,14 @@
+version: '3.3'
+
+services:
+    api:
+      image: mojitotea/flapi:latest
+      restart: always
+      ports:
+        - "5000:5000"
+      env_file: .env
+      environment:
+        - DB_USERNAME=$DB_USERNAME
+        - DB_PASSWORD=$DB_PASSWORD
+        - DB_HOSTNAME=$DB_HOSTNAME
+        - DB_NAME=$DB_NAME
