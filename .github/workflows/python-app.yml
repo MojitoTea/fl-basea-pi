@@ -63,7 +63,7 @@ jobs:
     needs: build_and_push
     strategy:
       matrix:
-        host: [3.73.48.203]
+        host: [3.73.48.203,3.127.38.136]
     env:
       USERNAME: ${{ secrets.USER }}
     steps:
@@ -103,7 +103,7 @@ jobs:
         needs: deploy
         strategy:
          matrix:
-           host: [3.73.48.203]
+           host: [3.73.48.203,3.127.38.136]
         steps:
              - name: Check
                uses: wei/curl@master
