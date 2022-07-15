@@ -79,7 +79,7 @@ jobs:
           host: ${{ matrix.host }}
           username: ${{ env.USERNAME }}
           key: ${{ secrets.AWS_SECRET_PASS }}
-          envs: DOCKER_USER, DOCKERHUB_TOK
+          envs: DOCKERHUB_USER, DOCKERHUB_TOK
           port: 22
           script: |
           
@@ -87,7 +87,7 @@ jobs:
             
             # login docker
             
-            sudo docker login -u $DOCKER_USER -p $DOCKERHUB_TOK
+            sudo docker login -u $DOCKERHUB_USER -p $DOCKERHUB_TOK
             
             sudo docker-compose stop
             
