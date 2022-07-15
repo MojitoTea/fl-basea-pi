@@ -86,6 +86,7 @@ jobs:
             cd ${{ secrets.SRC_PATH }}
             
             # login docker
+            
             sudo docker login -u $DOCKER_USER -p $DOCKERHUB_TOK
             
             sudo docker-compose stop
