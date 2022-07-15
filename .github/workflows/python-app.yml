@@ -93,6 +93,8 @@ jobs:
             
             sudo docker-compose rm
             
+            docker image prune -af
+            
             sudo docker-compose up -d
 
   check:
